@@ -4,7 +4,7 @@ import random
 
 # первый бросок
 print('введите кол-во костей:')
-a = int(input())j
+a = int(input())
 d = list()
 while a >= 1:
     b = random.randint(1, 6)
@@ -80,3 +80,4 @@ for i in counter_mass[1:6]:
         ot_2_do_6 += 1
 if ot_2_do_6 == 5:
     print('2-6 комбо, 750 очков!')
+#  Антоха смари
