@@ -3,7 +3,7 @@
 import random
 
 # первый бросок
-print('введите кол-во костей:')
+print('укажите кол-во костей:')
 a = int(input())
 d = list()
 while a >= 1:
@@ -23,7 +23,7 @@ for i in d:
         count += 1
         if i == count:
             counter_mass[i-1] += 1
-print('счетчик кубов (сортированный список): ', counter_mass)
+# print('счетчик кубов (сортированный список): ', counter_mass)
 
 # --------------ПРОВЕРКИ КОМБИНАЦИЙ-------------- #
 
@@ -35,7 +35,7 @@ for i in d:
         if i == j:
             count += 1
             b1[i] = count
-print('счетчик кубов (несортированный словарь): ', b1)
+# print('счетчик кубов (несортированный словарь): ', b1)
 for k in b1:
     if b1[k] == 3:
         print('троечька')
@@ -64,6 +64,7 @@ poltorashka = [1, 2, 3, 4, 5, 6]
 if sorted(d) == poltorashka:
     print('полторашка!')
 
+
 # ебаная проверка КК
 # print(counter_mass[0:5], ' - от 1 до 5 должны быть > 0')
 # print(counter_mass[1:6], ' - от 2 до 6 должны быть > 0')
@@ -81,11 +82,30 @@ for i in counter_mass[1:6]:
 if ot_2_do_6 == 5:
     print('2-6 комбо, 750 очков!')
 
+# конец проверки на комбинации
+
 # лист отложенных костей - название для Виталика?)))
 d2 = list()
+
 print('введите номера костей, которые нужно отложить:')
 d1 = list(input())
+
 for i in d1:
-    d2.append(d[int(i)-1])
+    if int(i) < 1:
+        break
+    else:
+        d2.append(d[int(i)-1])
 print('лист отложенных костей:', d2)
 
+
+def repeat_roll():
+    a2 = len(d)
+    a3 = a2 - len(d1)
+    d3 = []
+    while a3 >= 1:
+        b4 = random.randint(1, 6)
+        d3.append(b4)
+        a3 -= 1
+    print('сформирован лист броска - ', d3)
+
+repeat_roll()
