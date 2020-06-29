@@ -19,10 +19,3 @@ root.mainloop()
 
 def say_hello(name='test'):
     print("Hello,", name)
-
-
-say_hello()
-say_hello("Bob")
-say_hello("Alice")
-
-#  test12345678910
