@@ -6,10 +6,10 @@ import random
 print('укажите кол-во костей:')
 a = int(input())
 d = list()
-while a >= 1:
+for i in range(a):
     b = random.randint(1, 6)
     d.append(b)
-    a -= 1
+    # a -= 1
 print('сформирован лист броска - ', d)
 
 # d = [1, 2, 3, 4, 5, 6]
@@ -19,7 +19,7 @@ print('сформирован лист броска - ', d)
 counter_mass = [0] * 6
 for i in d:
     count = 0
-    for j in range(6):
+    for j in range(6):  # range(len(a)) ?
         count += 1
         if i == count:
             counter_mass[i-1] += 1
@@ -86,10 +86,8 @@ if ot_2_do_6 == 5:
 
 # лист отложенных костей - название для Виталика?)))
 d2 = list()
-
 print('введите номера костей, которые нужно отложить:')
 d1 = list(input())
-
 for i in d1:
     if int(i) < 1:
         break
@@ -98,14 +96,11 @@ for i in d1:
 print('лист отложенных костей:', d2)
 
 
-def repeat_roll():
-    a2 = len(d)
-    a3 = a2 - len(d1)
-    d3 = []
-    while a3 >= 1:
-        b4 = random.randint(1, 6)
-        d3.append(b4)
-        a3 -= 1
-    print('сформирован лист броска - ', d3)
-
-repeat_roll()
+# def roll():
+d3 = []
+for i in range(a - len(d2)):
+    b = random.randint(1, 6)
+    d3.append(b)
+print('сформирован лист повторного броска - ', d3)
+a1 = len(d3)
+print(a1)
