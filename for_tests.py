@@ -19,3 +19,7 @@ root.mainloop()
 
 def say_hello(name='test'):
     print("Hello,", name)
+
+100
+50
+1500

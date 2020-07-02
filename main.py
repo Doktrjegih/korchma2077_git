@@ -1,18 +1,19 @@
 #  Code on Python for cube-rolled game "Zonk"
 
 import random
+import combo as cb
 
 # первый бросок
-print('укажите кол-во костей:')
-a = int(input())
+# print('укажите кол-во костей:')
+# a = 6
 d = list()
-for i in range(a):
+for i in range(6):
     b = random.randint(1, 6)
     d.append(b)
     # a -= 1
 print('сформирован лист броска - ', d)
 
-# d = [1, 2, 3, 4, 5, 6]
+test_p = [1, 1, 1, 5, 5, 5]
 # print('---отсюда тест---\n', test_p)
 
 # счетчик кубов циклом
@@ -28,7 +29,7 @@ for i in d:
 # --------------ПРОВЕРКИ КОМБИНАЦИЙ-------------- #
 
 # проверка на 3 и более одинаковых (словарем)
-b1 = dict()  # почему нужны скобки?
+b1 = dict()
 for i in d:
     count = 0
     for j in d:
@@ -82,7 +83,7 @@ for i in counter_mass[1:6]:
 if ot_2_do_6 == 5:
     print('2-6 комбо, 750 очков!')
 
-# конец проверки на комбинации
+# --------------КОНЕЦ ПРОВЕРКИ НА КОМБИНАЦИИ-------------- #
 
 # лист отложенных костей - название для Виталика?)))
 d2 = list()
@@ -95,12 +96,4 @@ for i in d1:
         d2.append(d[int(i)-1])
 print('лист отложенных костей:', d2)
 
-
-# def roll():
-d3 = []
-for i in range(a - len(d2)):
-    b = random.randint(1, 6)
-    d3.append(b)
-print('сформирован лист повторного броска - ', d3)
-a1 = len(d3)
-print(a1)
+cb.combo(test_p)
