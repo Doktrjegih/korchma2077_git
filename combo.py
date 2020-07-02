@@ -1,6 +1,7 @@
 poltorashka = [1, 2, 3, 4, 5, 6]
 
 def combo(list):
+    global scores
     scores = 0
     a1 = True; a5 = True
 
@@ -15,12 +16,12 @@ def combo(list):
     # проверка на 1500
     if sorted(list) == poltorashka:
         scores += 1500
-        a1 = False; a5 = False
+        a1, a5 = False, False
 
     # проверка на 3 пары
     if sorted(counter_mass) == [0, 0, 0, 2, 2, 2]:
         scores += 750
-        a1 = False; a5 = False
+        a1, a5 = False, False
 
     # проверка на 3 и более одинаковых (словарем)
     b1 = dict()
@@ -72,7 +73,7 @@ def combo(list):
                 ot_1_do_5 += 1
         if ot_1_do_5 == 5:
             scores += 500
-            a1 = False; a5 = False
+            a1, a5 = False, False
             if b1[1] == 2:
                 scores += 100
             if b1[5] == 2:
@@ -83,7 +84,7 @@ def combo(list):
                 ot_2_do_6 += 1
         if ot_2_do_6 == 5:
             scores += 750
-            a1 = False; a5 = False
+            a1, a5 = False, False
             if b1[1] == 2:      # это нахуй не надо, потому что это 1500 сразу
                 scores += 100   # это нахуй не надо, потому что это 1500 сразу
             if b1[5] == 2:
