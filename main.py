@@ -1,6 +1,9 @@
 #  Code on Python for cube-rolled game "Zonk"
 
 import random
+
+from py2exe import build_exe
+
 import combo as cb
 
 # первый бросок
