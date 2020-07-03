@@ -101,5 +101,4 @@ for i in d1:
         d2.append(d[int(i)-1])
 print('лист отложенных костей:', d2)
 
-
 cb.combo(d2)
