@@ -103,4 +103,4 @@ print('лист отложенных костей:', d2)
 
 
 cb.combo(d2)
-# test
+# testn
