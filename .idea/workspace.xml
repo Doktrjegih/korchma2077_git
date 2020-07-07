@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin111" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="41ab9955-3f5c-48c8-b33f-5ffd5b505954" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../korchma2077_git\exportToHTML" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Antoha" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/Doktrjegih/korchma2077_git.git" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1dzxuGkXsJcxQPAPyVv74dRN0ja" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="main_window" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="korchma2077_git" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_window.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="setup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="korchma2077_git" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/setup.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="window_sendbox" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="korchma2077_git" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/window_sendbox.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.window_sendbox" />
+        <item itemvalue="Python.setup" />
+        <item itemvalue="Python.main_window" />
+        <item itemvalue="Python.window_sendbox" />
+        <item itemvalue="Python.setup" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="41ab9955-3f5c-48c8-b33f-5ffd5b505954" name="Default Changelist" comment="" />
+      <created>1593441944030</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593441944030</updated>
+    </task>
+    <task id="LOCAL-00001" summary="test new commit Sanya">
+      <created>1593442576233</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1593442576233</updated>
+    </task>
+    <task id="LOCAL-00002" summary="test2 new commit Sanya">
+      <created>1593442817344</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1593442817344</updated>
+    </task>
+    <task id="LOCAL-00003" summary="test3 new commit Sanya">
+      <created>1593444022484</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1593444022484</updated>
+    </task>
+    <task id="LOCAL-00004" summary="test3 new commit Sanya">
+      <created>1593444278005</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1593444278005</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add 45">
+      <created>1593444436387</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1593444436387</updated>
+    </task>
+    <task id="LOCAL-00006" summary="del 45">
+      <created>1593444448533</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1593444448533</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Антоха смари">
+      <created>1593445279581</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1593445279581</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Антоха смари222">
+      <created>1593445603569</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1593445603569</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Антоха смари222">
+      <created>1593445752130</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1593445752130</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Антоха смари222">
+      <created>1593445757444</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1593445757444</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Антоха смари222">
+      <created>1593447522233</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1593447522233</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Антоха смари222">
+      <created>1593447590082</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1593447590082</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Антоха смари222">
+      <created>1593447670832</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1593447670832</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Антоха смари222">
+      <created>1593447714351</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1593447714351</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Антоха смари222">
+      <created>1593447788573</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1593447788573</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Почему я удаляю из папки на компе, а в коммите, наоборот, добавляются? О_о">
+      <created>1593447868025</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1593447868025</updated>
+    </task>
+    <task id="LOCAL-00017" summary="26262662">
+      <created>1593448032988</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1593448032988</updated>
+    </task>
+    <task id="LOCAL-00018" summary="лист отложенных костей">
+      <created>1593460033085</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1593460033085</updated>
+    </task>
+    <task id="LOCAL-00019" summary="первая функция">
+      <created>1593462956438</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1593462956438</updated>
+    </task>
+    <task id="LOCAL-00020" summary="тест">
+      <created>1593521424267</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1593521424267</updated>
+    </task>
+    <task id="LOCAL-00021" summary="тест гитигнор">
+      <created>1593521928262</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1593521928262</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Add combo.py + function">
+      <created>1593665047728</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1593665047728</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Add combo.py + function">
+      <created>1593665779519</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1593665779519</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Проверка на КК работает">
+      <created>1593704228539</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1593704228539</updated>
+    </task>
+    <task id="LOCAL-00025" summary="add checking for no-combo first roll">
+      <created>1593707090389</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1593707090389</updated>
+    </task>
+    <task id="LOCAL-00026" summary="minor changes">
+      <created>1593752537557</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1593752537557</updated>
+    </task>
+    <task id="LOCAL-00027" summary="еуые">
+      <created>1593754128150</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1593754128150</updated>
+    </task>
+    <task id="LOCAL-00028" summary="еуые">
+      <created>1593754973027</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1593754973027</updated>
+    </task>
+    <task id="LOCAL-00029" summary="еуые">
+      <created>1593781206570</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1593781206570</updated>
+    </task>
+    <task id="LOCAL-00030" summary="я дурак, теперь норм">
+      <created>1593781277436</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1593781277436</updated>
+    </task>
+    <task id="LOCAL-00031" summary="я дурак, теперь норм">
+      <created>1593781370765</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1593781370765</updated>
+    </task>
+    <task id="LOCAL-00032" summary="я дурак, теперь норм">
+      <created>1593781574273</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1593781574273</updated>
+    </task>
+    <task id="LOCAL-00033" summary="s">
+      <created>1594147596278</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1594147596278</updated>
+    </task>
+    <task id="LOCAL-00034" summary="test after switch branches">
+      <created>1594151872025</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1594151872025</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test new commit Sanya" />
+    <MESSAGE value="test2 new commit Sanya" />
+    <MESSAGE value="test3 new commit Sanya" />
+    <MESSAGE value="add 45" />
+    <MESSAGE value="del 45" />
+    <MESSAGE value="Антоха смари" />
+    <MESSAGE value="Антоха смари222" />
+    <MESSAGE value="Почему я удаляю из папки на компе, а в коммите, наоборот, добавляются? О_о" />
+    <MESSAGE value="26262662" />
+    <MESSAGE value="лист отложенных костей" />
+    <MESSAGE value="первая функция" />
+    <MESSAGE value="тест" />
+    <MESSAGE value="тест гитигнор" />
+    <MESSAGE value="Add combo.py + function" />
+    <MESSAGE value="Проверка на КК работает" />
+    <MESSAGE value="add checking for no-combo first roll" />
+    <MESSAGE value="minor changes" />
+    <MESSAGE value="еуые" />
+    <MESSAGE value="я дурак, теперь норм" />
+    <MESSAGE value="s" />
+    <MESSAGE value="test after switch branches" />
+    <option name="LAST_COMMIT_MESSAGE" value="test after switch branches" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594151949715">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1594151949715" />
+    <state x="445" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593499888126">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="445" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1593499888126" />
+    <state x="392" y="0" key="#main" timestamp="1594149634317">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="392" y="0" key="#main/0.0.1366.728@0.0.1366.728" timestamp="1594149634316" />
+    <state x="163" y="0" key="CommitChangelistDialog2" timestamp="1594151871056">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1594151871056" />
+    <state x="129" y="55" width="1092" height="610" key="DiffContextDialog" timestamp="1594148979021">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="129" y="55" width="1092" height="610" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1594148979021" />
+    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1594151621662">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594151621662" />
+    <state x="543" y="262" key="Github.ShareDialog" timestamp="1594151653385">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="543" y="262" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1594151653385" />
+    <state x="496" y="75" key="Github.UntrackedFilesDialog" timestamp="1593442276854">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="496" y="75" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1593442276854" />
+    <state width="1345" height="198" key="GridCell.Tab.0.bottom" timestamp="1594151962029">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="198" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594151962029" />
+    <state width="1345" height="198" key="GridCell.Tab.0.center" timestamp="1594151962029">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="198" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594151962029" />
+    <state width="1345" height="198" key="GridCell.Tab.0.left" timestamp="1594151962029">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="198" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594151962029" />
+    <state width="1345" height="198" key="GridCell.Tab.0.right" timestamp="1594151962029">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="198" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594151962029" />
+    <state x="184" y="9" key="SettingsEditor" timestamp="1593779985491">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1593779985491" />
+    <state x="283" y="106" key="Vcs.Push.Dialog.v2" timestamp="1594151875204">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="283" y="106" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1594151875204" />
+    <state x="564" y="497" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594150244957">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="564" y="497" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1594150244957" />
+    <state x="486" y="91" key="git4idea.branch.GitSmartOperationDialog" timestamp="1594149589663">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="486" y="91" key="git4idea.branch.GitSmartOperationDialog/0.0.1366.728@0.0.1366.728" timestamp="1594149589663" />
+    <state x="469" y="225" key="git4idea.rebase.GitRebaseDialog" timestamp="1593451369601">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="469" y="225" key="git4idea.rebase.GitRebaseDialog/0.0.1366.728@0.0.1366.728" timestamp="1593451369601" />
+    <state x="739" y="181" key="refactoring.ChangeSignatureDialog" timestamp="1593705487897">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="739" y="181" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1593705487897" />
+    <state x="344" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1593761431151">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="344" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1593761431151" />
+  </component>
+</project>
