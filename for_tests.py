@@ -1,20 +1,27 @@
-from tkinter import *
-from tkinter import messagebox
+import random
+
+def roll():
+    a = 6
+    while a > 0:
+        d = list()
+        for j in range(a):
+            b = random.randint(1, 6)
+            d.append(b)
+        print('сформирован лист броска - ', d)
+        d2 = list()
+        print('введите номера костей, которые нужно отложить:')
+        d1 = list(input())
+        for i in d1:
+            if int(i) < 1:
+                break
+            else:
+                d2.append(d[int(i) - 1])
+        print('лист отложенных костей:', d2)
+        a -= len(d2)
+        print(a)
 
 
-def clicked():
-    messagebox.showinfo('Ты пидер', 'Оп, а вот и пидер!')
-
-
-root = Tk()
-root.title("Ты пидер, Санек")
-root.geometry('300x300')
-lbl = Label(root, text="Санек, ты в курсе, что ты пидер?!", font=("Times New Roman", 12))
-lbl.grid(column=0, row=0)
-btn = Button(root, text="Тыкни, если пидер", command=clicked)
-btn.grid(column=0, row=1)
-
-root.mainloop()
+roll()
 
 
 def say_hello(name='test'):
