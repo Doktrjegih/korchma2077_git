@@ -4,18 +4,19 @@ from tkinter import messagebox
 from tkinter import Menu
 
 
+# функции
 def roll_cubes():
-    dice = list()
+    cube_list = list()
     for i in range(6):
         buffer = random.randint(1, 6)
-        dice.append(buffer)
-    print(dice)
-    cube_1.configure(text=dice[0])
-    cube_2.configure(text=dice[1])
-    cube_3.configure(text=dice[2])
-    cube_4.configure(text=dice[3])
-    cube_5.configure(text=dice[4])
-    cube_6.configure(text=dice[5])
+        cube_list.append(buffer)
+    print(cube_list)
+    cube_1.configure(text=cube_list[0])
+    cube_2.configure(text=cube_list[1])
+    cube_3.configure(text=cube_list[2])
+    cube_4.configure(text=cube_list[3])
+    cube_5.configure(text=cube_list[4])
+    cube_6.configure(text=cube_list[5])
 
 
 def cube_choice(event):
