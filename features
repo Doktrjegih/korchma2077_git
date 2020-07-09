@@ -108,3 +108,32 @@ for i in test_p:
     if i == '6':
         c6 = c6 + 1
 print('счетчик кубов (сортированный): ', c1, c2, c3, c4, c5, c6)
+
+
+
+-------------старый main, первый бросок без цикла, лист отложенных костей-------------
+# first roll
+d = list()
+for i in range(6):
+    b = random.randint(1, 6)
+    d.append(b)
+print('сформирован лист броска - ', d)
+
+# проверка на комбо в первом броске
+first_roll = cb.first_combo(d)
+if first_roll == 0:
+    print('пока')
+    exit(0)
+else:
+    print(first_roll)
+
+# лист отложенных костей - название для Виталика?)))
+d2 = list()
+print('введите номера костей, которые нужно отложить:')
+d1 = list(input())
+for i in d1:
+    if int(i) < 1:
+        break
+    else:
+        d2.append(d[int(i)-1])
+print('лист отложенных костей:', d2)

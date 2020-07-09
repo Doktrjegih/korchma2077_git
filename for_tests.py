@@ -1,6 +1,7 @@
 import random
 import combo as cb
 
+
 def roll():
     a = 6
     scr_on_turn = 0
@@ -10,7 +11,7 @@ def roll():
             b = random.randint(1, 6)
             d.append(b)
         print('сформирован лист броска - ', d)
-        c = cb.first_combo(d)
+        c = cb.combo(d)
         if c == 0:  # проверка, есть ли комбо в броске
             print('нет комбо')
             break
@@ -22,13 +23,10 @@ def roll():
                 break
             else:
                 d2.append(d[int(i) - 1])
-        scr_on_turn = scr_on_turn + cb.first_combo(d2)
+        scr_on_turn = scr_on_turn + cb.combo(d2)
         print('лист отложенных костей:', d2, ' подытог хода -', scr_on_turn)
         e = input('кидаем снова? (Y/N): ')
         if e == 'Y' or e == 'y':
             a -= len(d2)
         if e == 'N' or e == 'n':
             break
-
-
-roll()
