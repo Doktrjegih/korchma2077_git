@@ -22,7 +22,3 @@ def roll():
 
 
 roll()
-
-
-def say_hello(name='test'):
-    print("Hello,", name)
