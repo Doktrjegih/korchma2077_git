@@ -5,8 +5,8 @@ def combo(list1):
     scores = 0
     a1 = True
     a5 = True
-    c = list()  # попробую запихать "правильные" кости в этот лист,
-                # чтобы сравнить со всем отложенным листом на предмет "лишних" костей
+    verified_combo = list()     # попробую запихать "правильные" кости в этот лист,
+                                # чтобы сравнить со всем отложенным листом на предмет "лишних" костей
 
     counter_mass = [0] * 6
     for i in list1:
@@ -37,35 +37,47 @@ def combo(list1):
     for k in b1:
         if b1[k] == 3 and k != 1 and k != 5:
             scores += k * 100
+            verified_combo.extend([k] * 3)
         elif b1[k] == 4 and k != 1 and k != 5:
             scores += k * 200
+            verified_combo.extend([k] * 4)
         elif b1[k] == 5 and k != 1 and k != 5:
             scores += k * 400
+            verified_combo.extend([k] * 5)
         elif b1[k] == 6 and k != 1 and k != 5:
             scores += k * 800
+            verified_combo.extend([k] * 6)
         elif b1[k] == 3 and k == 1:
             scores += 1000
+            verified_combo.extend([k] * 3)
             a1 = False
         elif b1[k] == 4 and k == 1:
             scores += 2000
+            verified_combo.extend([k] * 4)
             a1 = False
         elif b1[k] == 5 and k == 1:
             scores += 4000
+            verified_combo.extend([k] * 5)
             a1 = False
         elif b1[k] == 6 and k == 1:
             scores += 8000
+            verified_combo.extend([k] * 6)
             a1 = False
         elif b1[k] == 3 and k == 5:
             scores += 500
+            verified_combo.extend([k] * 3)
             a5 = False
         elif b1[k] == 4 and k == 5:
             scores += 1000
+            verified_combo.extend([k] * 4)
             a5 = False
         elif b1[k] == 5 and k == 5:
             scores += 2000
+            verified_combo.extend([k] * 5)
             a5 = False
         elif b1[k] == 6 and k == 5:
             scores += 4000
+            verified_combo.extend([k] * 6)
             a5 = False
 
     # ебаная проверка КК (а можно бы было втупую сравнить с листом 1-5 или 2-6)
@@ -76,32 +88,39 @@ def combo(list1):
                 from_1_to_5 += 1
         if from_1_to_5 == 5:
             scores += 500
+            verified_combo.extend([1, 2, 3, 4, 5])
             a1, a5 = False, False
             if b1[1] == 2:
                 scores += 100
+                verified_combo.append(1)
             if b1[5] == 2:
                 scores += 50
+                verified_combo.append(5)
         from_2_to_6 = 0
         for i in counter_mass[1:6]:
             if i > 0:
                 from_2_to_6 += 1
         if from_2_to_6 == 5:
             scores += 750
+            verified_combo.extend([2, 3, 4, 5, 6])
             a1, a5 = False, False
             if b1[5] == 2:
                 scores += 50
+                verified_combo.append(5)
 
     # проверка на 1 и 5
     if a1 is True:
         for i in list1:
             if i == 1:
                 scores += 100
+                verified_combo.append(1)
     if a5 is True:
         for i in list1:
             if i == 5:
                 scores += 50
+                verified_combo.append(5)
 
-    return scores
+    return scores, verified_combo
 
 
 def tips_combo(list1):  # ПРОВЕРКИ КОМБИНАЦИЙ (без счета)
