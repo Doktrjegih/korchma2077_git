@@ -18,11 +18,13 @@ def combo(list1):
     # проверка на 1500
     if sorted(list1) == one_and_a_half:
         scores += 1500
+        verified_combo = list1
         a1, a5 = False, False
 
     # проверка на 3 пары
     if sorted(counter_mass) == [0, 0, 0, 2, 2, 2]:
         scores += 750
+        verified_combo = list1
         a1, a5 = False, False
 
     # проверка на 3 и более одинаковых (словарем)

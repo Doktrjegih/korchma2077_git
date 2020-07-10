@@ -3,7 +3,7 @@
 import random
 import combo as cb
 
-test_p = [3, 4, 4, 4, 3, 3]  # used for tests
+test_p = [1, 3, 4, 2, 6, 5]  # used for tests
 
 
 def roll():
@@ -14,8 +14,8 @@ def roll():
         for i in range(a):  # бросок костей
             b = random.randint(1, 6)
             d.append(b)
-        print('сформирован лист броска - ', d)
-        c, v_c = cb.combo(d)  # без второй нельзя, но она нахуй мне не уперлась в этой строке
+        print('сформирован лист броска - ', test_p)
+        c, v_c = cb.combo(test_p)  # без второй нельзя, но она нахуй мне не уперлась в этой строке
         if c == 0:  # проверка, есть ли комбо в броске
             print('пока')
             scr_on_turn = 0
@@ -25,7 +25,7 @@ def roll():
         d1 = list(input())  # откладывание костей
         d2 = list()
         for i in d1:
-            d2.append(d[int(i) - 1])
+            d2.append(test_p[int(i) - 1])
         sc_on_tr, v_c = cb.combo(d2)
 
         while sorted(d2) != sorted(v_c):
