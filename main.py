@@ -134,3 +134,6 @@ while gameIsPlaying:
                 turn = 'Человек'
             else:
                 turn = 'Человек'
+
+input('Нажмите любую кнопку для выхода')
+exit()
