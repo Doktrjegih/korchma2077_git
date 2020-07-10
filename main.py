@@ -64,7 +64,7 @@ gameIsPlaying = True
 while gameIsPlaying:
 
     if turn == 'Человек':
-        if score2 >= 100:  # проверка на победу второго игрока
+        if score2 >= 3000:  # проверка на победу второго игрока
             if who == 'Человек':  # проверка на победу по равному кол-ву ходов
                 print('Общие очки Человека =', score1)
                 print('ходов поровну, Саня победил')
@@ -93,14 +93,14 @@ while gameIsPlaying:
             a22, a32 = roll()
             score1 = score1 + a22
             print('Общие очки Человека =', score1)
-            if score1 >= 100:
+            if score1 >= 3000:
                 print('Последний шанс Сани!')
                 turn = 'Саня'
             else:
                 turn = 'Саня'
 
     if turn == 'Саня':
-        if score1 >= 100:
+        if score1 >= 3000:
             if who == 'Саня':
                 print('Общие очки Сани =', score2)
                 print('ходов поровну, Человек победил')
@@ -129,7 +129,7 @@ while gameIsPlaying:
             b22, b32 = roll()
             score2 = score2 + b22
             print('Общие очки Сани =', score2)
-            if score2 >= 100:
+            if score2 >= 3000:
                 print('Последний шанс Человека')
                 turn = 'Человек'
             else:
