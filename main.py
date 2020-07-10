@@ -44,7 +44,7 @@ def roll():
             break
         if a == 0:
             a = 6
-    return scr_on_turn, v_c  # возврат функции
+    return scr_on_turn, v_c  # возврат функции (и че ему тут не нравится?)
 
 
 def who_goes_first():  # случайный выбор игрока, который ходит первым

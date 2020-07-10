@@ -5,8 +5,7 @@ def combo(list1):
     scores = 0
     a1 = True
     a5 = True
-    verified_combo = list()     # попробую запихать "правильные" кости в этот лист,
-                                # чтобы сравнить со всем отложенным листом на предмет "лишних" костей
+    verified_combo = list()  # лист правильного комбо
 
     counter_mass = [0] * 6
     for i in list1:
