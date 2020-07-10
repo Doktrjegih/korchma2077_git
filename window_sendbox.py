@@ -21,7 +21,6 @@ def roll_cubes():
 
 def cube_choice(event):
     messagebox.showinfo("cube", "cube selected")
-    #  что еще происходит при выборе куба?
 
 
 def cube_remove(event):
