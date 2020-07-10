@@ -5,6 +5,7 @@ def combo(list1):
     scores = 0
     a1 = True
     a5 = True
+    c = list()
 
     counter_mass = [0] * 6
     for i in list1:

@@ -137,3 +137,10 @@ for i in d1:
     else:
         d2.append(d[int(i)-1])
 print('лист отложенных костей:', d2)
+
+
+
+-------------это хуйня-------------
+players = int(input('введите кол-во игроков: '))
+print(players)
+for i in players:
