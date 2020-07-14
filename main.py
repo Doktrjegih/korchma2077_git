@@ -93,7 +93,7 @@ while gameIsPlaying:
             a22, a32 = roll()
             score1 = score1 + a22
             print('Общие очки Человека =', score1)
-            if score1 >= 3000:
+            if score1 >= 3000 and who == 'Человек':
                 print('Последний шанс Сани!')
                 turn = 'Саня'
             else:
@@ -129,8 +129,8 @@ while gameIsPlaying:
             b22, b32 = roll()
             score2 = score2 + b22
             print('Общие очки Сани =', score2)
-            if score2 >= 3000:
-                print('Последний шанс Человека')
+            if score2 >= 3000 and who == 'Саня':
+                print('Последний шанс Человека!')
                 turn = 'Человек'
             else:
                 turn = 'Человек'
