@@ -15,12 +15,16 @@ def roll():
             b = random.randint(1, 6)
             d.append(b)
         print('сформирован лист броска - ', d)
+
         c, v_c = cb.combo(d)  # без второй нельзя, но она нахуй мне не уперлась в этой строке
+
         if c == 0:  # проверка, есть ли комбо в броске
             print('пока')
             scr_on_turn = 0
             break
+
         # cb.tips_combo(d)  # подсказки для броска (можно закомментить, если мешает)
+
         print('введите номера костей, которые нужно отложить:')
         d1 = list(input())  # откладывание костей
         d2 = list()
@@ -44,7 +48,7 @@ def roll():
             break
         if a == 0:
             a = 6
-    return scr_on_turn, v_c  # возврат функции (и че ему тут не нравится?)
+    return scr_on_turn  # возврат функции (и че ему тут не нравится?)
 
 
 def who_goes_first():  # случайный выбор игрока, который ходит первым
@@ -62,7 +66,6 @@ print('' + turn + ' ходит первым')
 gameIsPlaying = True
 
 while gameIsPlaying:
-
     if turn == 'Человек':
         if score2 >= 3000:  # проверка на победу второго игрока
             if who == 'Человек':  # проверка на победу по равному кол-ву ходов
@@ -71,7 +74,7 @@ while gameIsPlaying:
                 gameIsPlaying = False
             else:
                 print('========Последний ход Человека========')
-                a22, a32 = roll()  # роллим и берем результат ф-ии
+                a22 = roll()  # роллим и берем результат ф-ии
                 score1 = score1 + a22  # считаем общие очки
                 if score1 > score2:  # проверка на камбэк /// добавить ничью, и снизу тоже
                     print('КАМБЭК! Человек победил!')
@@ -90,7 +93,7 @@ while gameIsPlaying:
                     gameIsPlaying = False
         else:
             print('========Ход Человека========')
-            a22, a32 = roll()
+            a22 = roll()
             score1 = score1 + a22
             print('Общие очки Человека =', score1)
             if score1 >= 3000 and who == 'Человек':
@@ -107,7 +110,7 @@ while gameIsPlaying:
                 gameIsPlaying = False
             else:
                 print('========Последний ход Сани========')
-                b22, b32 = roll()
+                b22 = roll()
                 score2 = score2 + b22
                 if score2 > score1:  # добавить ничью
                     print('КАМБЭК! Саня победил!')
@@ -126,7 +129,7 @@ while gameIsPlaying:
                     gameIsPlaying = False
         else:
             print('========Ход Сани========')
-            b22, b32 = roll()
+            b22 = roll()
             score2 = score2 + b22
             print('Общие очки Сани =', score2)
             if score2 >= 3000 and who == 'Саня':
