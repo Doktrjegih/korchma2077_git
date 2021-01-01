@@ -1,5 +1,3 @@
-#  Code on Python for cube-rolled game "Zonk"
-
 import random
 import combo as cb
 
