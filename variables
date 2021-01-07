@@ -1,4 +1,5 @@
 ---main.py---
+new_var = 'sanya pider' lolol
 i - счетчик внутри циклов
 
 test_p - тестовый лист первого броска
