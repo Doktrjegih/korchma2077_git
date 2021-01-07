@@ -80,10 +80,18 @@ New Game
 
 
 def high_score():
-    r = open('high_score.txt')
-    current_high_score = int(r.read())
+    r = open('high_score.txt', mode='r', encoding='utf-8')
+    b = 0
+    name = ''
+    for i in r:
+        a = i[0:50]
+        try:
+            b = int(a)
+        except:
+            name = i
+    current_high_score = b
     r.close()
-    return current_high_score
+    return current_high_score, name
 
 
 menu_app()

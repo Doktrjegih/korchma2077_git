@@ -8,7 +8,6 @@ test_p = [1, 3, 4, 2, 6, 5]  # used for tests
 def roll():
     a = 6
     scr_on_turn = 0
-    new_high_score = 0
     while a > 0:
         d = list()
         for i in range(a):  # бросок костей
@@ -45,12 +44,16 @@ def roll():
         e = input('кидаем снова? (+/-): ')  # запрос нового броска
         a -= len(d2)  # уменьшение кол-ва кубов в руке
         if e == '-':
-            if scr_on_turn > menu.high_score():
+            ttt, sss = menu.high_score()
+            if scr_on_turn > ttt:
                 new_high_score = scr_on_turn
-                w = open('high_score.txt', 'w')
-                w.write(str(new_high_score))
+                name_record_player = input('новый рекорд!\nвведите имя: ')
+                w = open('high_score.txt', mode="w", encoding='utf-8')
+                w.write(str(new_high_score) + '\n' + name_record_player)
                 w.close()
             break
+        if e != '+':
+            exit()
         if a == 0:
             a = 6
     return scr_on_turn  # возврат функции
@@ -69,15 +72,15 @@ def game():
     limit = int(input('до скольки очков играем\n'))
     turn = who_goes_first()  # первый ход тому, кто выбран в ф-ии who_goes_first
     who = turn
-    print('' + turn + ' ходит первым')
-    gameIsPlaying = True
-    while gameIsPlaying:
+    print(turn + ' ходит первым')
+    game_is_playing = True
+    while game_is_playing:
         if turn == 'Человек':
             if score2 >= limit:  # проверка на победу второго игрока
                 if who == 'Человек':  # проверка на победу по равному кол-ву ходов
                     print('Общие очки Человека =', score1)
                     print('ходов поровну, Саня победил')
-                    gameIsPlaying = False
+                    game_is_playing = False
                 else:
                     print('========Последний ход Человека========')
                     a22 = roll()  # роллим и берем результат ф-ии
@@ -86,17 +89,17 @@ def game():
                         print('КАМБЭК! Человек победил!')
                         print('Общие очки Человека =', score1)
                         print('Общие очки Сани =', score2)
-                        gameIsPlaying = False
+                        game_is_playing = False
                     elif score1 == score2:  # проверка на ничью
                         print('Общие очки Человека =', score1)
                         print('Общие очки Сани =', score2)
                         print('ничья')
-                        gameIsPlaying = False
+                        game_is_playing = False
                     else:
                         print('Увы, Саня победил')
                         print('Общие очки Сани =', score2)
                         print('Общие очки Человека =', score1)
-                        gameIsPlaying = False
+                        game_is_playing = False
             else:
                 print('========Ход Человека========')
                 a22 = roll()
@@ -113,7 +116,7 @@ def game():
                 if who == 'Саня':
                     print('Общие очки Сани =', score2)
                     print('ходов поровну, Человек победил')
-                    gameIsPlaying = False
+                    game_is_playing = False
                 else:
                     print('========Последний ход Сани========')
                     b22 = roll()
@@ -122,17 +125,17 @@ def game():
                         print('КАМБЭК! Саня победил!')
                         print('Общие очки Сани =', score2)
                         print('Общие очки Человека =', score1)
-                        gameIsPlaying = False
+                        game_is_playing = False
                     elif score2 == score1:
                         print('ничья')
                         print('Общие очки Сани =', score2)
                         print('Общие очки Человека =', score1)
-                        gameIsPlaying = False
+                        game_is_playing = False
                     else:
                         print('Увы, Человек победил')
                         print('Общие очки Человека =', score1)
                         print('Общие очки Сани =', score2)
-                        gameIsPlaying = False
+                        game_is_playing = False
             else:
                 print('========Ход Сани========')
                 b22 = roll()
