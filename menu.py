@@ -1,4 +1,4 @@
-import main as mn
+import main
 
 
 def menu_app():
@@ -52,7 +52,7 @@ def about_app():
 
 
 def score_app():
-    print('High score')
+    print('High score in 1 roll:', high_score())
     print('[0] Back')
     statement = int(input())
     if statement == 0:
@@ -75,7 +75,20 @@ New Game
     if statement == 0:
         menu_app()
     else:
-        mn.game()
+        main.game()
+        new_record = main.game()
+        if new_record > high_score():
+            w = open('high_score.txt', 'w')
+            w.write(str(new_record))
+            w.close()
+        menu_app()
+
+
+def high_score():
+    r = open('high_score.txt')
+    current_high_score = int(r.read())
+    r.close()
+    return current_high_score
 
 
 menu_app()
