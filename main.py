@@ -47,10 +47,13 @@ def roll():
         if e == '-':
             if scr_on_turn > menu.high_score():
                 new_high_score = scr_on_turn
+                w = open('high_score.txt', 'w')
+                w.write(str(new_high_score))
+                w.close()
             break
         if a == 0:
             a = 6
-    return scr_on_turn, new_high_score  # возврат функции
+    return scr_on_turn  # возврат функции
 
 
 def who_goes_first():  # случайный выбор игрока, который ходит первым
@@ -63,7 +66,6 @@ def who_goes_first():  # случайный выбор игрока, котор�
 def game():
     score1 = 0
     score2 = 0
-    nw_high_scr = 0
     limit = int(input('до скольки очков играем\n'))
     turn = who_goes_first()  # первый ход тому, кто выбран в ф-ии who_goes_first
     who = turn
@@ -78,7 +80,7 @@ def game():
                     gameIsPlaying = False
                 else:
                     print('========Последний ход Человека========')
-                    a22, nw_high_scr = roll()  # роллим и берем результат ф-ии
+                    a22 = roll()  # роллим и берем результат ф-ии
                     score1 = score1 + a22  # считаем общие очки
                     if score1 > score2:  # проверка на камбэк
                         print('КАМБЭК! Человек победил!')
@@ -97,7 +99,7 @@ def game():
                         gameIsPlaying = False
             else:
                 print('========Ход Человека========')
-                a22, nw_high_scr = roll()
+                a22 = roll()
                 score1 = score1 + a22
                 print('Общие очки Человека =', score1)
                 if score1 >= limit and who == 'Человек':
@@ -114,7 +116,7 @@ def game():
                     gameIsPlaying = False
                 else:
                     print('========Последний ход Сани========')
-                    b22, nw_high_scr = roll()
+                    b22 = roll()
                     score2 = score2 + b22
                     if score2 > score1:
                         print('КАМБЭК! Саня победил!')
@@ -133,7 +135,7 @@ def game():
                         gameIsPlaying = False
             else:
                 print('========Ход Сани========')
-                b22, nw_high_scr = roll()
+                b22 = roll()
                 score2 = score2 + b22
                 print('Общие очки Сани =', score2)
                 if score2 >= limit and who == 'Саня':
@@ -143,4 +145,3 @@ def game():
                     turn = 'Человек'
 
     input('Нажмите любую кнопку для выхода')
-    return nw_high_scr

@@ -76,11 +76,6 @@ New Game
         menu_app()
     else:
         main.game()
-        new_record = main.game()
-        if new_record > high_score():
-            w = open('high_score.txt', 'w')
-            w.write(str(new_record))
-            w.close()
         menu_app()
 
 
