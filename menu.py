@@ -52,7 +52,8 @@ def about_app():
 
 
 def score_app():
-    print('High score in 1 roll:', high_score())
+    print('High score in 1 roll:')
+    print(high_score())
     print('[0] Back')
     statement = int(input())
     if statement == 0:
@@ -81,15 +82,15 @@ New Game
 
 def high_score():
     r = open('high_score.txt', mode='r', encoding='utf-8')
-    b = 0
-    name = ''
+    b = []
+    name = []
     for i in r:
         a = i[0:50]
         try:
-            b = int(a)
+            b.append(int(a))
         except:
-            name = i
-    current_high_score = b
+            name.append(i)
+    current_high_score = min(b)
     r.close()
     return current_high_score, name
 
