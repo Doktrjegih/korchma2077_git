@@ -53,7 +53,10 @@ def about_app():
 
 def score_app():
     print('High score in 1 roll:')
-    print(high_score())
+    a = high_score()
+    print(str(a[0]) + ' - ' + str(a[1]))
+    print(str(a[2]) + ' - ' + str(a[3]))
+    print(str(a[4]) + ' - ' + str(a[5]))
     print('[0] Back')
     statement = int(input())
     if statement == 0:
