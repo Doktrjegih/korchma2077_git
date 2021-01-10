@@ -88,7 +88,6 @@ def high_score():
             b.append(int(i.strip()))
         except:
             b.append(i.strip())
-
     return b
 
 

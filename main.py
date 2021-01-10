@@ -144,28 +144,28 @@ def game():
 
 
 def new_high_score(nw_h_scr):
-    ttt = menu.high_score()
-    print('старые результаты:', ttt)
-    if nw_h_scr > ttt[4]:
+    old = menu.high_score()
+    print('старые результаты:', old)
+    if nw_h_scr > old[4]:
         name = input('новый рекорд!\nвведите имя: ')
-        if nw_h_scr > ttt[2]:
-            if nw_h_scr > ttt[0]:
-                ttt[5] = ttt[3]
-                ttt[4] = ttt[2]
-                ttt[3] = ttt[1]
-                ttt[2] = ttt[0]
-                ttt[1] = name
-                ttt[0] = nw_h_scr
+        if nw_h_scr > old[2]:
+            if nw_h_scr > old[0]:
+                old[5] = old[3]
+                old[4] = old[2]
+                old[3] = old[1]
+                old[2] = old[0]
+                old[1] = name
+                old[0] = nw_h_scr
             else:
-                ttt[5] = ttt[3]
-                ttt[4] = ttt[2]
-                ttt[3] = name
-                ttt[2] = nw_h_scr
+                old[5] = old[3]
+                old[4] = old[2]
+                old[3] = name
+                old[2] = nw_h_scr
         else:
-            ttt[5] = name
-            ttt[4] = nw_h_scr
+            old[5] = name
+            old[4] = nw_h_scr
         w = open('high_score.txt', mode="w", encoding='utf-8')
-        for i in ttt:
+        for i in old:
             w.write(str(i) + '\n')
         w.close()
-        print('новый массив', ttt)
+        print('новый массив', old)
