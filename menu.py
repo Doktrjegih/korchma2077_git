@@ -83,16 +83,27 @@ New Game
 def high_score():
     r = open('high_score.txt', mode='r', encoding='utf-8')
     b = []
-    name = []
     for i in r:
-        a = i[0:50]
         try:
-            b.append(int(a))
+            b.append(int(i.strip()))
         except:
-            name.append(i)
-    current_high_score = min(b)
-    r.close()
-    return current_high_score, name
+            b.append(i.strip())
+    j = 99999
+    for i1 in b:
+        try:
+            if i1 < j:
+                j = i1
+        except:
+            continue
+    b1 = []
+    for i2 in b:
+        try:
+            if i2 > 0:
+                b1.append(i2)
+        except:
+            continue
+    b2 = sorted(b1, reverse=True)
+    return b2
 
 
 menu_app()

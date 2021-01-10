@@ -44,13 +44,19 @@ def roll():
         e = input('кидаем снова? (+/-): ')  # запрос нового броска
         a -= len(d2)  # уменьшение кол-ва кубов в руке
         if e == '-':
-            ttt, sss = menu.high_score()
-            if scr_on_turn > ttt:
-                new_high_score = scr_on_turn
-                name_record_player = input('новый рекорд!\nвведите имя: ')
-                w = open('high_score.txt', mode="w", encoding='utf-8')
-                w.write(str(new_high_score) + '\n' + name_record_player)
-                w.close()
+            ttt = menu.high_score()
+            if scr_on_turn > ttt[2]:
+                if scr_on_turn > ttt[1]:
+                    if scr_on_turn > ttt[0]:
+                        ttt[2] = ttt[1]
+                        ttt[1] = ttt[0]
+                        ttt[0] = scr_on_turn
+                    else:
+                        ttt[2] = ttt[1]
+                        ttt[1] = scr_on_turn
+                else:
+                    ttt[2] = scr_on_turn
+                print(ttt)
             break
         if e != '+':
             exit()
