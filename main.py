@@ -44,19 +44,7 @@ def roll():
         e = input('кидаем снова? (+/-): ')  # запрос нового броска
         a -= len(d2)  # уменьшение кол-ва кубов в руке
         if e == '-':
-            ttt = menu.high_score()
-            if scr_on_turn > ttt[2]:
-                if scr_on_turn > ttt[1]:
-                    if scr_on_turn > ttt[0]:
-                        ttt[2] = ttt[1]
-                        ttt[1] = ttt[0]
-                        ttt[0] = scr_on_turn
-                    else:
-                        ttt[2] = ttt[1]
-                        ttt[1] = scr_on_turn
-                else:
-                    ttt[2] = scr_on_turn
-                print(ttt)
+            new_high_score(scr_on_turn)
             break
         if e != '+':
             exit()
@@ -152,5 +140,32 @@ def game():
                     turn = 'Человек'
                 else:
                     turn = 'Человек'
-
     input('Нажмите любую кнопку для выхода')
+
+
+def new_high_score(nw_h_scr):
+    ttt = menu.high_score()
+    print('старые результаты:', ttt)
+    if nw_h_scr > ttt[4]:
+        name = input('новый рекорд!\nвведите имя: ')
+        if nw_h_scr > ttt[2]:
+            if nw_h_scr > ttt[0]:
+                ttt[5] = ttt[3]
+                ttt[4] = ttt[2]
+                ttt[3] = ttt[1]
+                ttt[2] = ttt[0]
+                ttt[1] = name
+                ttt[0] = nw_h_scr
+            else:
+                ttt[5] = ttt[3]
+                ttt[4] = ttt[2]
+                ttt[3] = name
+                ttt[2] = nw_h_scr
+        else:
+            ttt[5] = name
+            ttt[4] = nw_h_scr
+        w = open('high_score.txt', mode="w", encoding='utf-8')
+        for i in ttt:
+            w.write(str(i) + '\n')
+        w.close()
+        print('новый массив', ttt)

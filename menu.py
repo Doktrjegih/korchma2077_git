@@ -88,22 +88,8 @@ def high_score():
             b.append(int(i.strip()))
         except:
             b.append(i.strip())
-    j = 99999
-    for i1 in b:
-        try:
-            if i1 < j:
-                j = i1
-        except:
-            continue
-    b1 = []
-    for i2 in b:
-        try:
-            if i2 > 0:
-                b1.append(i2)
-        except:
-            continue
-    b2 = sorted(b1, reverse=True)
-    return b2
+
+    return b
 
 
 menu_app()
