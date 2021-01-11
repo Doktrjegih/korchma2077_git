@@ -25,7 +25,7 @@ def roll():
         # cb.tips_combo(d)  # подсказки для броска (можно закомментить, если мешает)
 
         print('введите номера костей, которые нужно отложить:')
-        d1 = list(input())  # откладывание костей
+        d1 = list(check())  # откладывание костей
         d2 = list()
         for i in d1:
             d2.append(d[int(i) - 1])
@@ -169,3 +169,12 @@ def new_high_score(nw_h_scr):
             w.write(str(i) + '\n')
         w.close()
         print('новый массив', old)
+
+
+def check():
+    state = True
+    while state == True:
+        a = input()
+        if len(a) > 0 and len(a) < 7:
+            state = False
+            return a
