@@ -181,14 +181,15 @@ def check():
                     continue
                 else:
                     if len(a) != 1:
+                        duplicate_input = False
                         for j in a:
                             pair = 0
                             for k in a:
                                 if j == k:
                                     pair += 1
-                        if pair > 1:
-                            print('error', pair)
-                        else:
+                            if pair > 1:
+                                duplicate_input = True
+                        if duplicate_input == False:
                             state = False
                             return a
                     else:
