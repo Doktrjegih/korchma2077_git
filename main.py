@@ -33,7 +33,7 @@ def roll():
 
         while sorted(d2) != sorted(v_c):
             print('неправильно выбраны кости, попробуйте снова:')
-            d1 = list(input())
+            d1 = list(check())
             d2 = list()
             for i in d1:
                 d2.append(d[int(i) - 1])
