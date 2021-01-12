@@ -176,5 +176,21 @@ def check():
     while state == True:
         a = input()
         if len(a) > 0 and len(a) < 7:
-            state = False
-            return a
+            for i in a:
+                if i != '1' and i != '2' and i != '3' and i != '4' and i != '5' and i != '6':
+                    continue
+                else:
+                    if len(a) != 1:
+                        for j in a:
+                            pair = 0
+                            for k in a:
+                                if j == k:
+                                    pair += 1
+                        if pair > 1:
+                            print('error', pair)
+                        else:
+                            state = False
+                            return a
+                    else:
+                        state = False
+                        return a
