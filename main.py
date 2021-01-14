@@ -173,9 +173,9 @@ def new_high_score(nw_h_scr):
 
 def check():
     state = True
-    while state == True:
+    while state:
         a = input()
-        if len(a) > 0 and len(a) < 7:
+        if 0 < len(a) < 7:
             for i in a:
                 if i != '1' and i != '2' and i != '3' and i != '4' and i != '5' and i != '6':
                     continue
@@ -189,7 +189,7 @@ def check():
                                     pair += 1
                             if pair > 1:
                                 duplicate_input = True
-                        if duplicate_input == False:
+                        if not duplicate_input:
                             state = False
                             return a
                     else:
