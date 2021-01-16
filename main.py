@@ -1,197 +1,116 @@
+import csv
 import random
-import combo as cb
-import menu
-
-test_p = [1, 3, 4, 2, 6, 5]  # used for tests
-
-
-def roll():
-    a = 6
-    scr_on_turn = 0
-    while a > 0:
-        d = list()
-        for i in range(a):  # бросок костей
-            b = random.randint(1, 6)
-            d.append(b)
-        print('сформирован лист броска - ', d)
-
-        c, v_c = cb.combo(d)  # без второй нельзя, но она нахуй мне не уперлась в этой строке
-
-        if c == 0:  # проверка, есть ли комбо в броске
-            print('пока')
-            scr_on_turn = 0
-            break
-
-        # cb.tips_combo(d)  # подсказки для броска (можно закомментить, если мешает)
-
-        print('введите номера костей, которые нужно отложить:')
-        d1 = list(check())  # откладывание костей
-        d2 = list()
-        for i in d1:
-            d2.append(d[int(i) - 1])
-        sc_on_tr, v_c = cb.combo(d2)
-
-        while sorted(d2) != sorted(v_c):
-            print('неправильно выбраны кости, попробуйте снова:')
-            d1 = list(check())
-            d2 = list()
-            for i in d1:
-                d2.append(d[int(i) - 1])
-            sc_on_tr, v_c = cb.combo(d2)
-
-        scr_on_turn = scr_on_turn + sc_on_tr  # подсчет очков за ход /// тут менял cb.combo(d2) на sc_on_tr
-        print('лист отложенных костей:', d2, ' подытог хода -', scr_on_turn)
-        e = input('кидаем снова? (+/-): ')  # запрос нового броска
-        a -= len(d2)  # уменьшение кол-ва кубов в руке
-        if e == '-':
-            new_high_score(scr_on_turn)
-            break
-        if e != '+':
-            exit()
-        if a == 0:
-            a = 6
-    return scr_on_turn  # возврат функции
+import datetime
+import colorama
+from colorama import Fore, Style
 
 
-def who_goes_first():  # случайный выбор игрока, который ходит первым
-    if random.randint(0, 1) == 0:
-        return 'Саня'
-    else:
-        return 'Человек'
+def new_time(particular_time, oldest_records, count):
+    with open("test.csv", "r") as file:  # 1. читаем все строки в файле
+        lines = file.readlines()
+    for line in lines:  # 2. удаляем строку пройденного слова (определяем по времени)
+        if oldest_records[count][2] in line:
+            lines.remove(line)
+    with open("test.csv", "w") as file:  # 3. записываем обратно все строки без убранной
+        file.writelines(lines)
+    with open("test.csv", mode="a",
+              encoding='utf-8') as w_file:  # 4. дописываем в конец файла слово с новой датой
+        file_writer = csv.writer(w_file, delimiter=",", lineterminator="\r")
+        oldest_records[count][2] = particular_time
+        file_writer.writerow(oldest_records[count])
 
 
-def game():
-    score1 = 0
-    score2 = 0
-    limit = int(input('до скольки очков играем\n'))
-    turn = who_goes_first()  # первый ход тому, кто выбран в ф-ии who_goes_first
-    who = turn
-    print(turn + ' ходит первым')
-    game_is_playing = True
-    while game_is_playing:
-        if turn == 'Человек':
-            if score2 >= limit:  # проверка на победу второго игрока
-                if who == 'Человек':  # проверка на победу по равному кол-ву ходов
-                    print('Общие очки Человека =', score1)
-                    print('ходов поровну, Саня победил')
-                    game_is_playing = False
-                else:
-                    print('========Последний ход Человека========')
-                    a22 = roll()  # роллим и берем результат ф-ии
-                    score1 = score1 + a22  # считаем общие очки
-                    if score1 > score2:  # проверка на камбэк
-                        print('КАМБЭК! Человек победил!')
-                        print('Общие очки Человека =', score1)
-                        print('Общие очки Сани =', score2)
-                        game_is_playing = False
-                    elif score1 == score2:  # проверка на ничью
-                        print('Общие очки Человека =', score1)
-                        print('Общие очки Сани =', score2)
-                        print('ничья')
-                        game_is_playing = False
-                    else:
-                        print('Увы, Саня победил')
-                        print('Общие очки Сани =', score2)
-                        print('Общие очки Человека =', score1)
-                        game_is_playing = False
+def new_word():
+    class Word:
+        def __init__(self):
+            self.en_word = input('введите новое слово: ')
+            self.ru_word = input('введите перевод: ')
+            print('все верно? (0 для выхода)', self.en_word, '-', self.ru_word)
+            answer = input()
+            if answer == '+':
+                self.ans = True
+            elif answer == '-':
+                self.ans = False
+                new_word()
+            elif answer == '0':
+                main_menu()
+
+        def addword(self):
+            with open("test.csv", mode="a",
+                      encoding='utf-8') as w_file:
+                file_writer = csv.writer(w_file, delimiter=",", lineterminator="\r")
+                now = datetime.datetime.now()
+                new = [self.en_word, self.ru_word, str(now.isoformat()), 0]
+                file_writer.writerow(new)
+
+    word = Word()
+    if word.ans:
+        word.addword()
+
+
+def main_menu():
+    print('''лео сосатб
+----------
+выбери действие:
+[1] тренироваться
+[2] добавить слово
+
+[0] выход''')
+    action = int(input())
+    if action == 0:
+        exit()
+    if action == 1:
+        training()
+    elif action == 2:
+        new_word()
+
+
+def training():
+    with open("test.csv", encoding='utf-8') as r_file:  # открываем файл на чтение
+        reader = csv.reader(r_file, delimiter=",")
+        sortedlist = sorted(reader, key=lambda row: row[2], reverse=False)  # сортировка по дате
+        oldest_records = sortedlist[0:10]  # выбор трех самых старых записей
+        for i in range(10):  # цикл для взаимодействия с пользователем (вопрос-ответ)
+            answer_list = []  # обнуляем список вариантов ответа
+            count = random.randint(0, len(oldest_records) - 1)  # для рандома
+            print(oldest_records[count][0])  # выводим слово-вопрос
+            answer_list.append(oldest_records[count][1])  # добавляем правильный ответ к списку вариантов
+            with open("test.csv", encoding='utf-8') as r_file1:  # считаем кол-во строк в файле
+                reader1 = csv.reader(r_file1, delimiter=",")
+                amount_of_stings = 0
+                for m in reader1:
+                    amount_of_stings += 1
+            rand_list = []
+            for nn in range(4):  # выбираем номера строк для случайных вариантов ответа
+                rand_list.append(random.randint(1, amount_of_stings))
+            # print(rand_list)  # какие элементы тащит для вариантов ответа
+            with open("test.csv", encoding='utf-8') as r_file2:  # выбираем случайные варианты ответа из файла
+                reader2 = csv.reader(r_file2, delimiter=",")
+                number_of_string = 0
+                for n in reader2:
+                    number_of_string += 1
+                    if number_of_string in rand_list:
+                        answer_list.append(n[1])
+            random.shuffle(answer_list)  # перемешиваем список вариантов ответа
+            print('---select right answer (0 для выхода)---')  # показываем варианты пользователю
+            counter = 0
+            for x in answer_list:
+                counter += 1
+                print(counter, x)
+            answer1 = int(input())  # спрашиваем номер правильного варианта
+            if answer1 == 0:
+                main_menu()
+            if answer_list[answer1 - 1] == oldest_records[count][1]:  # условие если правильно/неправильно
+                print('great!\n')
+                now = datetime.datetime.now()
+                new_time(str(now.isoformat()), oldest_records, count)
             else:
-                print('========Ход Человека========')
-                a22 = roll()
-                score1 = score1 + a22
-                print('Общие очки Человека =', score1)
-                if score1 >= limit and who == 'Человек':
-                    print('Последний шанс Сани!')
-                    turn = 'Саня'
-                else:
-                    turn = 'Саня'
-
-        if turn == 'Саня':
-            if score1 >= limit:
-                if who == 'Саня':
-                    print('Общие очки Сани =', score2)
-                    print('ходов поровну, Человек победил')
-                    game_is_playing = False
-                else:
-                    print('========Последний ход Сани========')
-                    b22 = roll()
-                    score2 = score2 + b22
-                    if score2 > score1:
-                        print('КАМБЭК! Саня победил!')
-                        print('Общие очки Сани =', score2)
-                        print('Общие очки Человека =', score1)
-                        game_is_playing = False
-                    elif score2 == score1:
-                        print('ничья')
-                        print('Общие очки Сани =', score2)
-                        print('Общие очки Человека =', score1)
-                        game_is_playing = False
-                    else:
-                        print('Увы, Человек победил')
-                        print('Общие очки Человека =', score1)
-                        print('Общие очки Сани =', score2)
-                        game_is_playing = False
-            else:
-                print('========Ход Сани========')
-                b22 = roll()
-                score2 = score2 + b22
-                print('Общие очки Сани =', score2)
-                if score2 >= limit and who == 'Саня':
-                    print('Последний шанс Человека!')
-                    turn = 'Человек'
-                else:
-                    turn = 'Человек'
-    input('Нажмите любую кнопку для выхода')
+                colorama.init()
+                print(f'nope, right answer is: ' + Fore.GREEN + oldest_records[count][1].lower())
+                print(Style.RESET_ALL)
+                tomorrow = datetime.datetime.now() + datetime.timedelta(days=1)  # сделать + ~50 записей от самой старой
+                new_time(str(tomorrow.isoformat()), oldest_records, count)
+            del(oldest_records[count])  # слово пройдено, убираем из цикла
 
 
-def new_high_score(nw_h_scr):
-    old = menu.high_score()
-    print('старые результаты:', old)
-    if nw_h_scr > old[4]:
-        name = input('новый рекорд!\nвведите имя: ')
-        if nw_h_scr > old[2]:
-            if nw_h_scr > old[0]:
-                old[5] = old[3]
-                old[4] = old[2]
-                old[3] = old[1]
-                old[2] = old[0]
-                old[1] = name
-                old[0] = nw_h_scr
-            else:
-                old[5] = old[3]
-                old[4] = old[2]
-                old[3] = name
-                old[2] = nw_h_scr
-        else:
-            old[5] = name
-            old[4] = nw_h_scr
-        w = open('high_score.txt', mode="w", encoding='utf-8')
-        for i in old:
-            w.write(str(i) + '\n')
-        w.close()
-        print('новый массив', old)
-
-
-def check():
-    state = True
-    while state:
-        a = input()
-        if 0 < len(a) < 7:
-            for i in a:
-                if i != '1' and i != '2' and i != '3' and i != '4' and i != '5' and i != '6':
-                    continue
-                else:
-                    if len(a) != 1:
-                        duplicate_input = False
-                        for j in a:
-                            pair = 0
-                            for k in a:
-                                if j == k:
-                                    pair += 1
-                            if pair > 1:
-                                duplicate_input = True
-                        if not duplicate_input:
-                            state = False
-                            return a
-                    else:
-                        state = False
-                        return a
+main_menu()
