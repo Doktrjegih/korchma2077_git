@@ -25,7 +25,8 @@ def roll():
         # cb.tips_combo(d)  # подсказки для броска (можно закомментить, если мешает)
 
         print('введите номера костей, которые нужно отложить:')
-        d1 = list(check())  # откладывание костей
+        d1 = list(check(len(d)))  # откладывание костей
+        print('длина списка -', len(d))
         d2 = list()
         for i in d1:
             d2.append(d[int(i) - 1])
@@ -33,7 +34,8 @@ def roll():
 
         while sorted(d2) != sorted(v_c):
             print('неправильно выбраны кости, попробуйте снова:')
-            d1 = list(check())
+            d1 = list(check(len(d)))
+            print('длина списка -', len(d))
             d2 = list()
             for i in d1:
                 d2.append(d[int(i) - 1])
@@ -171,11 +173,11 @@ def new_high_score(nw_h_scr):
         print('новый массив', old)
 
 
-def check():
+def check(amount_cubes):
     state = True
     while state:
         a = input()
-        if 0 < len(a) < 7:
+        if 0 < len(a) < amount_cubes + 1:
             for i in a:
                 if i != '1' and i != '2' and i != '3' and i != '4' and i != '5' and i != '6':
                     continue
