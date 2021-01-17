@@ -42,7 +42,19 @@ Exit Game
 
 
 def about_app():
-    print('About')
+    print('''About
+Name = Farkle
+rules
+The following scores for single dice or combinations of dice are widely established,
+in that they are common to all or nearly all of the above-cited descriptions of farkle scoring.
+Each 1	100
+Each 5 	50
+Three 1s	1000
+Three 2s	200
+Three 3s	300
+Three 4s	400
+Three 5s	500
+Three 6s	600 * N''')
     print('[0] Back')
     statement = int(input())
     if statement == 0:
