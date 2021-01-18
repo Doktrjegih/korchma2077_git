@@ -176,8 +176,9 @@ def new_high_score(nw_h_scr):
 def check(amount_cubes):
     state = True
     while state:
+        print(amount_cubes)
         a = input()
-        if 0 < len(a) < amount_cubes + 1:
+        if 0 < len(a) < (amount_cubes + 1):
             for i in a:
                 if i != '1' and i != '2' and i != '3' and i != '4' and i != '5' and i != '6':
                     continue
