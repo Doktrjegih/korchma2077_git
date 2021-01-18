@@ -7,6 +7,7 @@ def test(event):
 
 
 root = Tk()
+root.geometry('600x400+500+300')
 
 ent = Entry(root, width=20)
 but = Button(root, text="Вывести")
