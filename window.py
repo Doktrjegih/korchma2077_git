@@ -1,20 +1,28 @@
 from tkinter import *
+import random
 
 
-def test():
-    text = ent.get()
-    lab['text'] = text
+def generator():
+    for widget in frame.winfo_children():
+        widget.destroy()
+    for i in range(6):
+        i = Cube()
+
+
+class Cube:
+    def __init__(self):
+        self.b = str(random.randint(1, 6))
+        self.but = Button(frame, text=self.b, command=test)
+        self.but.pack(side=LEFT)
 
 
 root = Tk()
 root.geometry('600x400+500+300')
+frame = Frame(root)
 
-ent = Entry(root, width=20)
-but = Button(root, text="Вывести", command=test)
-lab = Label(root, width=20, bg='black', fg='white')
+gen = Button(root, text='Сделать кубы', command=generator)
 
-ent.pack()
-but.pack()
-lab.pack()
+gen.pack()
+frame.pack()
 
 root.mainloop()
