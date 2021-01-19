@@ -26,7 +26,6 @@ def roll():
 
         print('введите номера костей, которые нужно отложить:')
         d1 = list(check(len(d)))  # откладывание костей
-        print('длина списка -', len(d))
         d2 = list()
         for i in d1:
             d2.append(d[int(i) - 1])
@@ -35,7 +34,6 @@ def roll():
         while sorted(d2) != sorted(v_c):
             print('неправильно выбраны кости, попробуйте снова:')
             d1 = list(check(len(d)))
-            print('длина списка -', len(d))
             d2 = list()
             for i in d1:
                 d2.append(d[int(i) - 1])
@@ -176,25 +174,31 @@ def new_high_score(nw_h_scr):
 def check(amount_cubes):
     state = True
     while state:
-        print(amount_cubes)
+        y = ''
+        for u in range(1, amount_cubes + 1):
+            y += str(u)
         a = input()
         if 0 < len(a) < (amount_cubes + 1):
+            trigger = 0
             for i in a:
-                if i != '1' and i != '2' and i != '3' and i != '4' and i != '5' and i != '6':
-                    continue
-                else:
-                    if len(a) != 1:
-                        duplicate_input = False
-                        for j in a:
-                            pair = 0
-                            for k in a:
-                                if j == k:
-                                    pair += 1
-                            if pair > 1:
-                                duplicate_input = True
-                        if not duplicate_input:
-                            state = False
-                            return a
-                    else:
+                if i not in y:
+                    trigger += 1
+            if trigger > 0:
+                print('неправильно выбраны кости, попробуйте снова:')
+            else:
+                if len(a) != 1:
+                    duplicate_input = False
+                    for j in a:
+                        pair = 0
+                        for k in a:
+                            if j == k:
+                                pair += 1
+                        if pair > 1:
+                            duplicate_input = True
+                            print('неправильно выбраны кости, попробуйте снова:')
+                    if not duplicate_input:
                         state = False
                         return a
+                else:
+                    state = False
+                    return a
